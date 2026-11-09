@@ -1,5 +1,5 @@
 /* Dinos Creation Upgrade 2.0 — bump CACHE when site assets change. */
-const CACHE = 'dinos-creation-v2-0';
+const CACHE = 'dinos-creation-v2-1';
 const FILES = ['./', 'index.html', 'logo.png', 'manifest.json', 'icon-192.png', 'icon-512.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES)).then(() => self.skipWaiting()));
