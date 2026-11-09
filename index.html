@@ -38,8 +38,8 @@ nav a.l:hover{color:var(--leaf)}
 .hero::before{content:"";position:absolute;inset:-60px 0 0;z-index:0;background:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:44px 44px;animation:grid 6s linear infinite;-webkit-mask-image:radial-gradient(circle at 50% 40%,#000,transparent 72%);mask-image:radial-gradient(circle at 50% 40%,#000,transparent 72%)}
 @keyframes grid{to{background-position:0 44px}}
 .hero>*{position:relative;z-index:1}
-.hero img{width:min(270px,64vw);-webkit-mask-image:linear-gradient(#000 70%,transparent);mask-image:linear-gradient(#000 70%,transparent);filter:drop-shadow(0 0 22px var(--glow)) brightness(.95)}
-.kicker{color:var(--moss);letter-spacing:.14em;margin-top:-22px}
+.hero img{width:min(190px,48vw);height:auto;filter:drop-shadow(0 0 26px var(--glow))}
+.kicker{color:var(--moss);letter-spacing:.14em}
 h1{font-weight:900;font-size:clamp(36px,11vw,84px);line-height:1.05;color:var(--leaf);text-shadow:0 0 30px var(--glow)}
 .tag{color:var(--moss);font-size:18px;min-height:3.4em;max-width:26em}
 .tag::after{content:"|";margin-left:2px;animation:blink 1s steps(2) infinite}
@@ -89,7 +89,7 @@ dialog p{color:var(--moss);margin-bottom:18px}
 <canvas id="fx"></canvas>
 
 <nav>
-  <a class="logo" href="#top"><img src="dino.png" alt="">DINOS CREATION</a>
+  <a class="logo" href="#top"><img src="logo.png" alt="">DINOS CREATION</a>
   <a class="l" href="#brand">Brand</a>
   <a class="l" href="#divisions">Divisions</a>
   <a class="l" href="#projects">Projects</a>
@@ -99,7 +99,7 @@ dialog p{color:var(--moss);margin-bottom:18px}
 </nav>
 
 <header class="hero" id="top">
-  <img src="dino.png" alt="Green cartoon dinosaur">
+  <img src="logo.png" alt="Dinos Creation logo">
   <p class="kicker">Welcome to</p>
   <h1>Dinos<br>Creation</h1>
   <p class="tag" id="tagline"></p>
@@ -179,8 +179,7 @@ const site = {
   /* division must match a division name above.
      details = longer text for the popup (optional), image = picture file name (optional), link = "" if none */
   projects: [
-    { title: "Electronics Basics", division: "Learn", text: "Basic knowledge about electronics in PDF.", details: "A PDF guide that explains the basics of electronics: components, circuits and how they work.", link: "electrical-knowledge.pdf" },
-    
+    { title: "Electronics Basics", division: "Learn", text: "Basic knowledge about electronics in PDF.", details: "A PDF guide that explains the basics of electronics: components, circuits and how they work.", link: "electrical-knowledge.pdf" }
   ],
   /* Contact form: sign up free at formspree.io, create a form, and paste its ID here (looks like "xyzabcde").
      Until then the form opens the visitor's email app, using the email below. */
